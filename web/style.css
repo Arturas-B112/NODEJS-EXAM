@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 5rem 0;
+}
+
+.header-container img {
+  width: 100px;
+  height: 100px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#register-form input {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+}
+
+#register-form button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+}

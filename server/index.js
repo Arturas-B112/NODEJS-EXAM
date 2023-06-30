@@ -50,15 +50,15 @@ server.post("/register", async (req, res) => {
     `,
       [payload.full_name, payload.email, encryptedPassword]
     );
-    // const token = jwt.sign(
-    //   {
-    //     name: payload.name,
-    //     email: payload.email,
-    //     id: response.insertId,
-    //   },
-    //   process.env.JWT_SECRET
-    // );
-    res.status(201).send("Congrats, user registered!");
+    const token = jwt.sign(
+      {
+        name: payload.name,
+        email: payload.email,
+        id: response.insertId,
+      },
+      process.env.JWT_SECRET
+    );
+    res.status(201).send({ token });
   } catch (error) {
     console.log(error);
     res.status(500).end();
