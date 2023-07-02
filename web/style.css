@@ -42,3 +42,47 @@
   margin-top: 1rem;
   color: black;
 }
+
+/* GROUPS WEB */
+
+.select-group-header {
+  text-align: center;
+}
+
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.group-card {
+  border: 1px solid black;
+  width: 300px;
+  padding: 5rem;
+  text-align: center;
+}
+
+.buttons-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.buttons-container button {
+  background-color: white;
+  padding: 1rem;
+  width: 200px;
+}
+
+.forms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.forms-container form button {
+  background-color: white;
+  width: 75px;
+}

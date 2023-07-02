@@ -165,7 +165,8 @@ server.get("/accounts", authenticate, async (req, res) => {
     const [response] = await dbPool.execute(
       `
     SELECT groups.id, name FROM mydb.groups
-    LEFT JOIN mydb.accounts ON groups.id = ?
+    LEFT JOIN mydb.accounts ON groups.id = group_id
+    WHERE user_id = ?
     `,
       [req.user.user_id]
     );

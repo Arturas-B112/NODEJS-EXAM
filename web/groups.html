@@ -4,6 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="groups.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header-container">
+        <div>
+          <img src="assets/dollar.png" alt="logo image" />
+        </div>
+        <h1>Split Bill</h1>
+        <h3>Best of the best service</h3>
+      </div>
+    </header>
+    <main>
+      <h3 class="select-group-header">Select your group</h3>
+      <div id="cards-container"></div>
+      <div class="buttons-container">
+        <button id="user-groups-btn">Show your groups</button>
+        <button id="all-groups-btn">Show all groups</button>
+      </div>
+      <div class="forms-container">
+        <form id="create-group-form">
+          <h3>Create new group</h3>
+          <label for="name">Group name:</label>
+          <input type="text" name="name" id="name" />
+          <button type="submit">Create</button>
+        </form>
+        <form id="join-group-form">
+          <h3>Join group (Check all groups for ID)</h3>
+          <label for="id">Group ID:</label>
+          <input type="text" name="id" id="id" />
+          <button type="submit">Join</button>
+        </form>
+      </div>
+      <div id="error-output"></div>
+    </main>
+  </body>
 </html>
