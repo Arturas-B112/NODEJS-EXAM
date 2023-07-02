@@ -1,6 +1,7 @@
 const form = document.getElementById("register-form");
 const firstPasswordInput = document.getElementById("password");
 const secondPasswordInput = document.getElementById("password-repeated");
+const output = document.getElementById("output");
 
 const API_BASE = "http://localhost:8080";
 
@@ -32,5 +33,13 @@ form.addEventListener("submit", async (e) => {
   const data = await registerUser(paylaod);
   if (firstPasswordInput.value === secondPasswordInput.value && data.token) {
     window.location.replace("./login.html");
+  } else {
+    const errorMessage = document.createElement("h3");
+    errorMessage.textContent = "Something went wrong. Please try again.";
+    output.append(errorMessage);
+    const inputs = document.querySelectorAll(
+      "#name, #email, #password, #password-repeated"
+    );
+    inputs.forEach((input) => (input.value = ""));
   }
 });

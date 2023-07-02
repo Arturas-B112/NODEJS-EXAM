@@ -34,3 +34,11 @@
   padding: 0.5rem 1rem;
   background-color: white;
 }
+
+.already-registered {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1rem;
+  color: black;
+}
