@@ -5,6 +5,7 @@ const allGroupsBtn = document.getElementById("all-groups-btn");
 const createGroupForm = document.getElementById("create-group-form");
 const joinGroupForm = document.getElementById("join-group-form");
 const errorOutput = document.getElementById("error-output");
+const logoutBtn = document.getElementById("logout-btn");
 
 if (!token) {
   window.location.replace("./login.html");
@@ -88,6 +89,11 @@ const renderGroups = (groups) => {
 
     cardContainer.append(idHeading, groupName);
     output.append(cardContainer);
+
+    cardContainer.addEventListener("click", () => {
+      sessionStorage.setItem("id", group.id);
+      window.location.replace("./bills.html");
+    });
   });
 };
 
@@ -129,4 +135,9 @@ joinGroupForm.addEventListener("submit", async (e) => {
   joinGroup(payload);
 
   e.target.id.value = "";
+});
+
+logoutBtn.addEventListener("click", () => {
+  Cookies.remove("token");
+  window.location.replace("./login.html");
 });

@@ -30,11 +30,12 @@ form.addEventListener("submit", async (e) => {
     password: e.target.password.value,
   };
 
-  const data = await registerUser(paylaod);
-  if (firstPasswordInput.value === secondPasswordInput.value && data.token) {
+  if (firstPasswordInput.value === secondPasswordInput.value) {
+    await registerUser(paylaod);
     window.location.replace("./login.html");
   } else {
     const errorMessage = document.createElement("h3");
+    errorMessage.textContent = "";
     errorMessage.textContent = "Something went wrong. Please try again.";
     output.append(errorMessage);
     const inputs = document.querySelectorAll(

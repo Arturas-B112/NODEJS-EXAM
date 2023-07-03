@@ -23,6 +23,12 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-container h3 {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 #register-form input {
@@ -75,14 +81,18 @@
   width: 200px;
 }
 
-.forms-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.forms-container form button {
+.form-container form button {
   background-color: white;
   width: 75px;
+}
+
+/* BILLS WEB */
+
+#output-table {
+  margin: 0 auto;
+}
+
+#output-table th,
+td {
+  padding: 1rem 5rem;
 }
